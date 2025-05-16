@@ -218,3 +218,8 @@
   background: linear-gradient(90deg, transparent, var(--primary), transparent);
   opacity: 0.5;
 }
+
+/* Particle styling */
+#tsparticles canvas {
+  filter: drop-shadow(0 0 8px rgba(147, 51, 234, 0.5));
+}

@@ -38,14 +38,20 @@ export default function Portfolio() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white relative overflow-hidden">
+        {/* Grid Background - Move to lower z-index */}
+        <div className="fixed inset-0 z-0">
+          <GridBackground />
+        </div>
+
+        {/* Particle Background - Higher z-index than grid */}
+        {mounted && (
+          <div className="fixed inset-0 z-[1]">
+            <ParticleBackground />
+          </div>
+        )}
+
         {/* Cursor Glow Effect */}
         {mounted && <CursorGlow />}
-
-        {/* Particle Background */}
-        {mounted && <ParticleBackground />}
-
-        {/* Grid Background */}
-        <GridBackground />
 
         {/* Tube Light Effect */}
         <TubeLight />

@@ -17,11 +17,17 @@ export default function ParticleBackground() {
   return (
     <Particles
       id="tsparticles"
-      className="fixed inset-0 -z-10"
+      className="fixed inset-0 z-0"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
         fpsLimit: 60,
+        fullScreen: false,
+        background: {
+          color: {
+            value: "transparent",
+          },
+        },
         interactivity: {
           events: {
             onClick: {
@@ -31,15 +37,16 @@ export default function ParticleBackground() {
             onHover: {
               enable: true,
               mode: "repulse",
+              distance: 150,
             },
             resize: true,
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 6,
             },
             repulse: {
-              distance: 100,
+              distance: 150,
               duration: 0.4,
             },
           },
@@ -52,8 +59,8 @@ export default function ParticleBackground() {
             color: "#9333ea",
             distance: 150,
             enable: true,
-            opacity: 0.3,
-            width: 1,
+            opacity: 0.5, // Increased from 0.3
+            width: 1.5, // Increased from 1
           },
           move: {
             direction: "none",
@@ -62,24 +69,43 @@ export default function ParticleBackground() {
               default: "bounce",
             },
             random: false,
-            speed: 1,
+            speed: 1.5, // Increased from 1
             straight: false,
+            attract: {
+              enable: true,
+              rotateX: 600,
+              rotateY: 1200,
+            },
           },
           number: {
             density: {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 100, // Increased from 80
           },
           opacity: {
-            value: 0.3,
+            value: 0.7, // Increased from 0.3
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.4,
+              sync: false,
+            },
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 3 },
+            value: { min: 2, max: 5 }, // Increased from min: 1, max: 3
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 1,
+              sync: false,
+            },
           },
         },
         detectRetina: true,
