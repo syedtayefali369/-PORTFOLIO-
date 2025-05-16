@@ -1,11 +1,28 @@
 "use client"
 
-import { useCallback } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Particles from "react-tsparticles"
 import type { Container, Engine } from "tsparticles-engine"
 import { loadSlim } from "tsparticles-slim"
 
 export default function ParticleBackground() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Check on mount
+    checkMobile()
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile)
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine)
   }, [])
@@ -37,16 +54,16 @@ export default function ParticleBackground() {
             onHover: {
               enable: true,
               mode: "repulse",
-              distance: 150,
+              distance: isMobile ? 100 : 150,
             },
             resize: true,
           },
           modes: {
             push: {
-              quantity: 6,
+              quantity: isMobile ? 3 : 6,
             },
             repulse: {
-              distance: 150,
+              distance: isMobile ? 100 : 150,
               duration: 0.4,
             },
           },
@@ -57,10 +74,10 @@ export default function ParticleBackground() {
           },
           links: {
             color: "#9333ea",
-            distance: 150,
+            distance: isMobile ? 100 : 150,
             enable: true,
-            opacity: 0.5, // Increased from 0.3
-            width: 1.5, // Increased from 1
+            opacity: 0.5,
+            width: isMobile ? 1 : 1.5,
           },
           move: {
             direction: "none",
@@ -69,7 +86,7 @@ export default function ParticleBackground() {
               default: "bounce",
             },
             random: false,
-            speed: 1.5, // Increased from 1
+            speed: isMobile ? 1 : 1.5,
             straight: false,
             attract: {
               enable: true,
@@ -82,10 +99,10 @@ export default function ParticleBackground() {
               enable: true,
               area: 800,
             },
-            value: 100, // Increased from 80
+            value: isMobile ? 50 : 100,
           },
           opacity: {
-            value: 0.7, // Increased from 0.3
+            value: 0.7,
             random: true,
             anim: {
               enable: true,
@@ -98,7 +115,7 @@ export default function ParticleBackground() {
             type: "circle",
           },
           size: {
-            value: { min: 2, max: 5 }, // Increased from min: 1, max: 3
+            value: { min: isMobile ? 1 : 2, max: isMobile ? 3 : 5 },
             random: true,
             anim: {
               enable: true,

@@ -7,8 +7,15 @@ export default function CursorGlow() {
   const [visible, setVisible] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
   const [isClicking, setIsClicking] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
+    // Check if we're on a mobile device
+    setIsMobile(window.innerWidth < 768)
+
+    // If mobile, don't set up the cursor effect
+    if (window.innerWidth < 768) return
+
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY })
       setVisible(true)
@@ -49,6 +56,9 @@ export default function CursorGlow() {
       window.removeEventListener("mouseover", handleLinkHoverOn)
     }
   }, [])
+
+  // Don't render anything on mobile
+  if (isMobile) return null
 
   return (
     <div
