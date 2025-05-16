@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Code, ExternalLink, Github, Mail, User } from "lucide-react"
+import { ArrowRight, Code, ExternalLink, Github, Mail } from "lucide-react"
 import ThemeToggle from "@/components/theme-toggle"
 import GridBackground from "@/components/grid-background"
 import TubeLight from "@/components/tube-light"
@@ -17,6 +17,8 @@ import PageTransition from "@/components/page-transition"
 import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+
+import "./components/profile-image-animation.css"
 
 // Dynamically import ThreeScene to avoid SSR issues
 const ThreeScene = dynamic(() => import("@/components/three-scene"), {
@@ -60,7 +62,7 @@ export default function Portfolio() {
               </SmoothScrollLink>
               <div className="flex items-center gap-2 font-bold px-4">
                 <Code className="h-5 w-5 text-primary" />
-                <span>DevPortfolio</span>
+                <span>Portfolio</span>
               </div>
               <SmoothScrollLink href="#projects" className="transition-colors hover:text-primary">
                 Projects
@@ -84,11 +86,11 @@ export default function Portfolio() {
               {/* 3D Scene in background */}
               <div className="absolute inset-0 -z-10 h-[400px] md:h-[600px]">{mounted && <ThreeScene />}</div>
 
-              <div className="rounded-full bg-gradient-to-br from-primary/20 to-primary/40 p-4 mb-8 shadow-[0_0_15px_rgba(0,0,0,0.3)] border border-primary/30">
-                <User className="h-12 w-12 text-primary" />
+              <div className="rounded-full bg-gradient-to-br from-primary/20 to-primary/40 p-1 mb-8 shadow-[0_0_15px_rgba(0,0,0,0.3)] border border-primary/30 w-32 h-32 overflow-hidden profile-image-float profile-image-glow">
+                <img src="/images/profile.png" alt="Profile" className="w-full h-full object-cover rounded-full" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-white">
-                Hi, I'm <span className="text-primary">Alex</span>
+                Hi, I'm <span className="text-primary">TAYEF</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-[650px] mb-8 relative z-10 bg-gray-900/50 backdrop-blur-sm px-4 py-2 rounded-lg">
                 A passionate full-stack developer crafting beautiful and functional web experiences
@@ -140,9 +142,9 @@ export default function Portfolio() {
                   <div className="relative w-full h-full p-4">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-lg"></div>
                     <img
-                      src="/placeholder.svg?height=400&width=400"
+                      src="/images/profile.png"
                       alt="Profile"
-                      className="rounded-lg relative z-10 w-full h-full object-cover"
+                      className="rounded-lg relative z-10 w-full h-full object-cover object-center"
                       width={400}
                       height={400}
                     />
