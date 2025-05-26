@@ -1,8 +1,5 @@
 # 💼Portfolio 
-
-[![Live Demo](https://img.shields.io/badge/View%20Live%20Portfolio-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VydmVudENvbG9yIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDh6bS0xLTE0aDJ2NmgtMnYtNnptMCA4aDJ2MmgtMnYtMnoiLz48L3N2Zz4=)](YOUR_PORTFOLIO_LIVE_DEMO_LINK_HERE)
-[![GitHub Repository](https://img.shields.io/badge/Repository-View%20on%20GitHub-lightgrey?style=for-the-badge&logo=github)](YOUR_GITHUB_REPO_LINK_FOR_THIS_PORTFOLIO)
-
+### 🛑Live Preview - https://v0-web-dev-portfolio-tau.vercel.app/
 ---
 
 ## 🚀 About This Portfolio
@@ -12,6 +9,10 @@ Welcome to the source code repository for my personal web developer portfolio! T
 This portfolio is designed to be [mention key characteristics, e.g., "fully responsive," "performant," "interactive," "built with a modern tech stack"].
 
 ---
+<img width="1250" alt="p1" src="https://github.com/user-attachments/assets/85e4e1d6-9d41-4b0d-9e09-e9eb4512e58e" />
+<img width="1246" alt="p3" src="https://github.com/user-attachments/assets/8e89118f-a74a-49b7-bf7b-afdeec605ff2" />
+<img width="1246" alt="p2" src="https://github.com/user-attachments/assets/79f672f5-7255-48fc-a5ca-a784caca2801" />
+
 
 ## ✨ Key Features of the Portfolio
 
@@ -22,20 +23,6 @@ This portfolio is designed to be [mention key characteristics, e.g., "fully resp
 * **[Your Unique Feature 1]:** e.g., "Interactive Animations," "Theme Toggler (Light/Dark Mode)," "Contact Form with EmailJS Integration."
 * **[Your Unique Feature 2]:** e.g., "Blog Section for Tech Articles," "Integration with GitHub API to display recent activity."
 * **(Add more features as applicable)**
-
----
-
-## 🖼️ Screenshots
-
-**(It's highly recommended to add a few screenshots or a GIF of your portfolio here. This gives a quick visual overview.)**
-
-*Desktop View:*
-![Desktop View of Portfolio](PATH_TO_YOUR_DESKTOP_SCREENSHOT.PNG)
-
-*Mobile View:*
-![Mobile View of Portfolio](PATH_TO_YOUR_MOBILE_SCREENSHOT.PNG)
-
-*(To add images, commit them to your repository, e.g., in an `assets` or `docs/images` folder, and then use the relative path.)*
 
 ---
 
