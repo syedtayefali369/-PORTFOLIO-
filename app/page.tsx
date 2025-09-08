@@ -161,7 +161,7 @@ export default function Portfolio() {
             <AnimatedSection className="py-12 md:py-32 relative" direction="up" distance={50}>
               {/* 3D Scene in background - hide on small mobile */}
               <div className="absolute inset-0 -z-10 h-[300px] md:h-[600px] hidden sm:block">
-                {mounted && <ThreeScene />}
+                {/* {mounted && <ThreeScene />} */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
