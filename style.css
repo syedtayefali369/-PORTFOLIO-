@@ -723,11 +723,11 @@
         /* Light Mode Styles */
         .light-mode {
             --primary: #0077ff;
-            --secondary: #ff6600;
+            --secondary: #00ff73;
             --accent: #00aaff;
-            --dark: #222;
-            --darker: #f0f4fa;
-            --light: #222;
+            --dark: #fff8f8;
+            --darker: #064129;
+            --light: #fdfbfb;
             background: linear-gradient(135deg, var(--darker), #fff);
             color: var(--dark);
         }
